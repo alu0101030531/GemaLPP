@@ -9,4 +9,8 @@ class Alimento
   def to_s 
    "Nombre: #{nombre}, Proteinas: #{proteinas}, Carbohidratos: #{carbohidratos}, Lípidos: #{lipidos}, GEI: #{gei}, Terreno: #{terreno}"
   end
+  
+  def valor_energetico
+    @proteinas * 4 + @carbohidratos * 4 + @lipidos * 9
+  end
 end

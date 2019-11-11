@@ -31,6 +31,6 @@ RSpec.describe Alimento do
     expect(@carne_de_vaca.to_s).to eq("Nombre: Carne de Vaca, Proteinas: 21.1, Carbohidratos: 0.0, Lípidos: 3.1, GEI: 50.0, Terreno: 164.0")
   end
   it "Debe calcular el valor energético del alimento" do
-    expect(@carne_de_vaca.valor_energético).to eq(96.8)
+    expect(@carne_de_vaca.valor_energetico).to be_within(0.01).of(112.3)
   end
 end
