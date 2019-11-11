@@ -2,8 +2,7 @@ RSpec.describe FoodImpact do
   it "has a version number" do
     expect(FoodImpact::VERSION).not_to be nil
   end
+end
 
-  it "does something useful" do
-    expect(false).to eq(true)
-  end
+RSpec.describe Alimento do
 end
