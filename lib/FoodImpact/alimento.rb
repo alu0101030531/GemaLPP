@@ -6,4 +6,7 @@ class Alimento
     @terreno = terreno
   end
 
+  def to_s 
+   "Nombre: #{nombre}, Proteinas: #{proteinas}, Carbohidratos: #{carbohidratos}, Lípidos: #{lipidos}, GEI: #{gei}, Terreno: #{terreno}"
+  end
 end

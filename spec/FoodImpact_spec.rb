@@ -28,7 +28,6 @@ RSpec.describe Alimento do
     expect(@carne_de_vaca.terreno).to eq(164.0)
   end
   it "Debe existir un método con el alimento formateado" do
-    expect(@carne_de_vaca.to_s).to eq("Nombre: Carne de vaca, Proteinas: 21.1, Carbohidratos: 0.0, Lípidos: 3.1, GEI:
-    50.0, Terreno: 164.0")
+    expect(@carne_de_vaca.to_s).to eq("Nombre: Carne de Vaca, Proteinas: 21.1, Carbohidratos: 0.0, Lípidos: 3.1, GEI: 50.0, Terreno: 164.0")
   end
 end
