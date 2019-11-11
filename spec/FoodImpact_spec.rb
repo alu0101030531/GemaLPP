@@ -5,8 +5,14 @@ RSpec.describe FoodImpact do
 end
 
 RSpec.describe Alimento do
+  before :each do
+    @carne_de_vaca = Alimento.new("Carne de Vaca", 21.1)
+  end
+
   it "Debe existir un nombre para el alimento" do
-    alimento = Alimento.new("Carne de Vaca")
-    expect(alimento.nombre).to eq("Carne de Vaca")
+    expect(@carne_de_vaca.nombre).to eq("Carne de Vaca")
+  end
+  it "Debe tener unas proteinas el alimento" do
+    expect(@carne_de_vaca.proteinas).to eq(21.1)
   end
 end
