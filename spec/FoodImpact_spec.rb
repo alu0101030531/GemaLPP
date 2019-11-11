@@ -18,4 +18,7 @@ RSpec.describe Alimento do
   it "Debe tener carbohidratos el alimento" do
     expect(@carne_de_vaca.carbohidratos).to eq(0.0)
   end
+  it "Debe tener Lípidos el alimento" do
+    expect(@carne_de_vaca.lipidos).to eq(3.1)
+  end
 end
