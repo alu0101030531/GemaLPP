@@ -6,7 +6,7 @@ end
 
 RSpec.describe Alimento do
   before :each do
-    @carne_de_vaca = Alimento.new("Carne de Vaca", 21.1, 0.0, 3.1)
+    @carne_de_vaca = Alimento.new("Carne de Vaca", 21.1, 0.0, 3.1, 50.0)
   end
 
   it "Debe existir un nombre para el alimento" do
