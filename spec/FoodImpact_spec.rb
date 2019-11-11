@@ -24,4 +24,7 @@ RSpec.describe Alimento do
   it "Debe tener unos GEI asociados" do
     expect(@carne_de_vaca.gei).to eq(50.0)
   end
+  it "Debe tener un uso de terreno" do
+    exppect(@carne_de_vaca.terreno).to eq(164.0)
+  end
 end
