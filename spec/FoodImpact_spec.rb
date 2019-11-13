@@ -6,6 +6,10 @@ end
 
 RSpec.describe Alimento do
   before :each do
+    @Nuez = Alimento.new("Nuez", 20.0, 21.0, 54.0 ,0.3, 7.9)
+    @Pollo = Alimento.new("Pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+    @Huevos = Alimento.new("Huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
+    @Cerveza = Alimento.new("Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
     @carne_de_vaca = Alimento.new("Carne de Vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
   end
 
@@ -32,5 +36,13 @@ RSpec.describe Alimento do
   end
   it "Debe calcular el valor energético del alimento" do
     expect(@carne_de_vaca.valor_energetico).to be_within(0.01).of(112.3)
+  end
+  it "Debe calcular el impacto ambiental de un hombre" do
+    expect(@Nuez.gei + @Pollo.gei + @Huevos.gei + @Cerveza.gei).to be_within(0.01).of(10.44)
+    expect(@Nuez.terreno + @Pollo.terreno + @Huevos.terreno + @Cerveza.terreno).to be_within(0.01).of(20.92)
+  end 
+  it "Debe calcular el impacto ambiental de una mujer" do
+    expect(@Nuez.gei + @Pollo.gei + @Huevos.gei + @Cerveza.gei).to be_within(0.01).of(10.44)
+    expect(@Nuez.terreno + @Pollo.terreno + @Huevos.terreno + @Cerveza.terreno).to be_within(0.01).of(20.92)
   end
 end
