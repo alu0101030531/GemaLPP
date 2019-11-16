@@ -28,6 +28,10 @@ RSpec.describe List do
   it "Extrae el primer elemento" do
     expect(@food_list.first).to eq(@nuez)
   end
+
+  it "Debe devolver la cabeza" do
+    @food_list.head
+  end
 end
 
 RSpec.describe Dieta do
