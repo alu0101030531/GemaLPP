@@ -19,4 +19,8 @@ class List
     end
     @sz_+=1
   end 
+
+  def last
+    @tail_[:value]
+  end
 end
