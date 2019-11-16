@@ -23,4 +23,8 @@ class List
   def last
     @tail_[:value]
   end
+  
+  def first
+    @head_[:value]
+  end
 end
