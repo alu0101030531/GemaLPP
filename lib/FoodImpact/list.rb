@@ -2,6 +2,7 @@
 Node = Struct.new(:value, :prev, :next)     # Nodos que formarán parte de la lista
 
 class List
+  attr_reader :head
   # Construye una lista con una cabeza y una cola
   def initialize (head, tail)
     @head_ = head
