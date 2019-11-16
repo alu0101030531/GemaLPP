@@ -29,3 +29,8 @@ RSpec.describe List do
     expect(@food_list.first).to eq(@nuez)
   end
 end
+
+RSpec.describe Dieta do
+end
+
+
