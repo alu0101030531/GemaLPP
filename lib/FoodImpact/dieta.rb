@@ -1,5 +1,5 @@
 class Dieta
-  def initilize 
-  end
-    
+  def initialize(list) 
+  @list = list
+  end 
 end
