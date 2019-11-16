@@ -1,3 +1,3 @@
-describe List do
+RSpec.describe List do
 
 end
