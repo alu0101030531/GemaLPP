@@ -9,6 +9,11 @@ RSpec.describe List do
   end
 
   it "Debe poder insertar" do
-    @food_list.insert(@producto)
+    @food_list.insert(@carne_de_vaca)
+  end
+
+  it "Extrae el último elemento" do
+    @food_list.insert(@carne_de_vaca)
+    expect(@food_list.last).to eq(@carne_de_vaca)
   end
 end
