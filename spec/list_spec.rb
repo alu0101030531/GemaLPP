@@ -57,6 +57,10 @@ RSpec.describe Dieta do
   it "Permite calcular el GEI diario para la dieta" do
     expect(@diet.geiPerDay).to be_within(0.01).of(60.44) 
   end
+
+  it "Permite calcular el GEI anual para la dieta" do
+    expect(@diet.getPerYear).to be within(0.01).of(14.4)
+  end
 end
 
 
