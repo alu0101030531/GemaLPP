@@ -5,7 +5,7 @@ class Dieta
   end
 
   # Obtiene la emisión de gases de la dieta en un día
-  def geiPerDay()
+  def geiPerDay
     aux = @list_.head
     sum_gei = 0.0
     while aux != nil do
@@ -13,5 +13,10 @@ class Dieta
       aux = aux[:next]
     end
     sum_gei
+  end
+
+  # Obtiene la emision de gases anual
+  def geiPerYear
+    365 * geiPerDay
   end
 end

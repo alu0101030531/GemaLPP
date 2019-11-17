@@ -59,7 +59,7 @@ RSpec.describe Dieta do
   end
 
   it "Permite calcular el GEI anual para la dieta" do
-    expect(@diet.getPerYear).to be within(0.01).of(14.4)
+    expect(@diet.geiPerYear).to be_within(0.01).of(22060.6)
   end
 end
 
