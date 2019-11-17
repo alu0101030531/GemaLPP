@@ -20,4 +20,14 @@ class Dieta
     365 * geiPerDay
   end
 
+  # Obtiene el uso de terreno
+  def terreno
+    aux = @list_.head
+    sum_terreno = 0.0
+    while aux != nil do
+      sum_terreno += aux[:value].terreno
+      aux = aux[:next]
+    end
+    sum_terreno
+  end
 end

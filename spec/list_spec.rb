@@ -63,7 +63,7 @@ RSpec.describe Dieta do
   end
 
   it "Permite calcular el uso del terreno" do
-    expect(@diet.terreno).to be within(0.01).of(300)
+    expect(@diet.terreno).to be_within(0.01).of(184.92)
   end
 end
 
