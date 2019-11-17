@@ -19,4 +19,5 @@ class Dieta
   def geiPerYear
     365 * geiPerDay
   end
+
 end

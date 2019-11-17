@@ -61,6 +61,10 @@ RSpec.describe Dieta do
   it "Permite calcular el GEI anual para la dieta" do
     expect(@diet.geiPerYear).to be_within(0.01).of(22060.6)
   end
+
+  it "Permite calcular el uso del terreno" do
+    expect(@diet.terreno).to be within(0.01).of(300)
+  end
 end
 
 
