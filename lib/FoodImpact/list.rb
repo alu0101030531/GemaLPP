@@ -2,7 +2,6 @@
 Node = Struct.new(:value, :prev, :next)     # Nodos que formarán parte de la lista
 
 class List
-  attr_reader :head
   # Construye una lista con una cabeza y una cola
   def initialize (head, tail)
     @head_ = head
@@ -32,5 +31,10 @@ class List
   # Extrae el primer objeto de la lista
   def first
     @head_[:value]
+  end
+  
+  # Devuelve head
+  def head
+    @head_
   end
 end

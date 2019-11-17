@@ -47,10 +47,15 @@ RSpec.describe Dieta do
     @food_list.insert(@pollo)
     @food_list.insert(@huevos)
     @food_list.insert(@cerveza)
+    @diet = Dieta.new(@food_list)
   end
 
   it "La clase dieta tiene un constructor" do
     dieta = Dieta.new(@food_list)  
+  end
+
+  it "Permite calcular el GEI diario para la dieta" do
+    expect(@diet.geiPerDay).to be_within(0.01).of(60.44) 
   end
 end
 
