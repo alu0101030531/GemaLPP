@@ -108,6 +108,11 @@ RSpec.describe Dieta do
     @veg_diet.insert(@leche)
     @veg_diet.insert(@leche)
     @veg = Dieta.new(@veg_diet)
+    @carne_diet = List.new(nil, nil)
+    @carne_diet.insert(@carne_de_vaca)
+    @carne_diet.insert(@pollo)
+    @carne_diet.insert(@Salmon)
+    @carnivora = Dieta.new(@carne_diet)
   end
 
   it "Calcula el GEI diario para la dieta española" do
@@ -144,6 +149,10 @@ RSpec.describe Dieta do
 
   it "Calcula el uso del terreno para la dieta vegetariana" do
     expect(@veg.terreno).to be_within(0.01).of(31.52)
+  end
+
+  it "Calcula el GEI diario para la dieta carnivora" do
+    expect(@carnivora.geiPerDay).to be_within(0.01).of(61.7)
   end
 end
 
