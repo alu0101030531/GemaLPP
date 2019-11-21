@@ -112,8 +112,13 @@ RSpec.describe Dieta do
   it "Calcula el uso de terreno para la dieta española" do
     expect(@diet.terreno).to be_within(0.01).of(175.74)
   end
+
   it "Calcula el GEI diario para la dieta vasca" do
     expect(@vasca.geiPerDay).to  be_within(0.01).of(3.239)
+  end
+  
+  it "Calcula el GEI por año para la dieta vasca" do
+    expect(@vasca.geiPerYear).to be_within(0.01).of(1182.59)
   end
 
 end
