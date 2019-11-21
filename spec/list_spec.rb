@@ -121,6 +121,10 @@ RSpec.describe Dieta do
     expect(@vasca.geiPerYear).to be_within(0.01).of(1182.59)
   end
 
+  it "Calcula el uso del terreno para la dieta vasca" do
+    expect(@vasca.terreno).to be_within(0.01).of(14.92)
+  end
+
 end
 
 
