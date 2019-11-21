@@ -86,6 +86,7 @@ RSpec.describe Dieta do
     @Salmon = Alimento.new("Salmon", 19.9, 0.0, 13.6, 6.0, 3.7)
     @tofu = Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
     @lentejas = Alimento.new("Lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
+    @leche = Alimento.new("Leche", 3.3, 4.8, 3.2, 3.2, 8.9)
     @food_list = List.new(nil, nil)
     @food_list.insert(@carne_de_vaca)
     @food_list.insert(@chocolate)
@@ -99,6 +100,14 @@ RSpec.describe Dieta do
     @vasca_diet.insert(@lentejas)
     @vasca_diet.insert(@cerveza)
     @vasca = Dieta.new(@vasca_diet)
+    @veg_diet = List.new(nil, nil)
+    @veg_diet.insert(@nuez)
+    @veg_diet.insert(@tofu)
+    @veg_diet.insert(@lentejas)
+    @veg_diet.insert(@cerveza)
+    @veg_diet.insert(@leche)
+    @veg_diet.insert(@leche)
+    @veg = Dieta.new(@veg_diet)
   end
 
   it "Calcula el GEI diario para la dieta española" do
@@ -124,7 +133,10 @@ RSpec.describe Dieta do
   it "Calcula el uso del terreno para la dieta vasca" do
     expect(@vasca.terreno).to be_within(0.01).of(14.92)
   end
-
+  
+  it "Calcula el GEI diario para la dieta vegetariana" do
+    expect(@veg.geiPerDay).to be_within(0.01).of(9.34)
+  end
 end
 
 
