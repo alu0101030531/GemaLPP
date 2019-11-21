@@ -150,10 +150,6 @@ RSpec.describe Dieta do
   it "Calcula el uso del terreno para la dieta vegetariana" do
     expect(@veg.terreno).to be_within(0.01).of(31.52)
   end
-
-  it "Calcula el GEI diario para la dieta carnivora" do
-    expect(@carnivora.geiPerDay).to be_within(0.01).of(61.7)
-  end
 end
 
 
