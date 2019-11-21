@@ -137,6 +137,10 @@ RSpec.describe Dieta do
   it "Calcula el GEI diario para la dieta vegetariana" do
     expect(@veg.geiPerDay).to be_within(0.01).of(9.34)
   end
+
+  it "Calcula el GEI anual para la dieta vegetariana" do
+    expect(@veg.geiPerYear).to be_within(0.01).of(3409.1)
+  end
 end
 
 
