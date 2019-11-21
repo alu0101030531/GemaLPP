@@ -95,8 +95,16 @@ RSpec.describe Dieta do
     @diet = Dieta.new(@food_list)
   end
 
-  it "Calcula el GEI diario para la dieta" do
+  it "Calcula el GEI diario para la dieta española" do
     expect(@diet.geiPerDay).to be_within(0.01).of(53.08)
+  end
+  
+  it "Calcula el GEI anual para la dieta española" do
+    expect(@diet.geiPerYear).to be_within(0.01).of(19374.2)
+  end
+
+  it "Calcula el uso de terreno para la dieta española" do
+    expect(@diet.terreno).to be_within(0.01).of(175.74)
   end
 end
 
