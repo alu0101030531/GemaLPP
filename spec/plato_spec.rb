@@ -34,6 +34,6 @@ RSpec.describe Plato do
     expect(@plato.kcalorias).to be_within(0.01).of(74.08)
   end
   it "Plato formateado" do
-    expect(@plato.to_s).to eq("Escaldon: lentejas, tofu, salmon")
+    expect(@plato.to_s).to eq("Escaldon: Lentejas, Tofu, Salmon")
   end
 end

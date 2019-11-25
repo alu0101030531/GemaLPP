@@ -52,4 +52,13 @@ class Plato
     end
     calorias
   end
+  def to_s
+    format = "#{nombre}: "
+    food = @ingredientes.head
+    while food != @ingredientes.tail do
+      format += "#{food[:value].nombre}, "
+      food = food[:next]
+    end
+    format += "#{@ingredientes.tail[:value].nombre}"
+  end
 end

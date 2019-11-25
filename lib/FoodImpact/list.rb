@@ -39,6 +39,10 @@ class List
     @head_
   end
   
+  def tail
+    @tail_
+  end
+  
   # Yield con cada elemento de la lista
   def each
     node = @head_
