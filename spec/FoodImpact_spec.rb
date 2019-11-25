@@ -64,5 +64,8 @@ RSpec.describe Alimento do
     it "método between" do
       expect(@Nuez.between?(@Pollo, @carne_de_vaca)).to eq(true)
     end
+    it "método clamp" do
+      expect(@carne_de_vaca.clamp(@Pollo, @Nuez)).to eq(@Nuez)
+    end
   end
 end
