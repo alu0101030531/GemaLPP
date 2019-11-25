@@ -22,6 +22,6 @@ RSpec.describe Plato do
     expect(@plato.nombre).to eq("Escaldon")
   end
   it "Proteinas del plato" do
-    expect(@plato.proteinas).to eq(190)
+    expect(@plato.proteinas).to be_within(0.01).of(39.44)
   end
 end
