@@ -42,4 +42,14 @@ class Plato
     end
     lipidos * (100.0 / @total_nutricional)
   end
+
+  def kcalorias
+    food = @ingredientes.head
+    calorias = 0.0
+    while food != nil do
+      calorias += food[:value].valor_energetico
+      food = food[:next]
+    end
+    calorias
+  end
 end
