@@ -45,4 +45,9 @@ RSpec.describe Alimento do
     expect(@Nuez.gei + @Pollo.gei + @Huevos.gei + @Cerveza.gei).to be_within(0.01).of(10.44)
     expect(@Nuez.terreno + @Pollo.terreno + @Huevos.terreno + @Cerveza.terreno).to be_within(0.01).of(20.92)
   end
+  context "Comparando objetos" do
+    it "operador < " do
+      expect(@Nuez < @carne_de_vaca).to eq(true)
+    end
+  end
 end
