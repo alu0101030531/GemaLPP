@@ -27,4 +27,7 @@ RSpec.describe Plato do
   it "Carbohidratos del plato" do
     expect(@plato.carbohidratos).to be_within(0.01).of(46.87)
   end
+  it "Lipidos del plato" do
+    expect(@plato.lipidos).to be_within(0.01).of(30)
+  end
 end
