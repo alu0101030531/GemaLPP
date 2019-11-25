@@ -52,6 +52,9 @@ RSpec.describe List do
   it "Método select" do
     expect(@list.select { |alimento| alimento.proteinas == 21.1}).to eq([@carne_de_vaca])
   end
+  it "Método max" do
+    expect(@list.max).to eq(@carne_de_vaca)
+  end
 end
 
 RSpec.describe Dieta do
