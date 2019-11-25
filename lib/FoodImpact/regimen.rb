@@ -1,2 +1,3 @@
-class Regimen 
+class Regimen < Plato
+
 end
