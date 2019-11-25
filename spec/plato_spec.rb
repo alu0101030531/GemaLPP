@@ -30,4 +30,7 @@ RSpec.describe Plato do
   it "Lipidos del plato" do
     expect(@plato.lipidos).to be_within(0.01).of(13.68)
   end
+  it "KiloCalorias del plato" do
+    expect(@plato.kcalorias).to be_within(0.01).of(50)
+  end
 end
