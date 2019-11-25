@@ -32,10 +32,22 @@ RSpec.describe List do
   it "Debe devolver la cabeza" do
     @food_list.head
   end
-  context "Pruebas módulo enumerable" do
-    it "método collect" do
-      expect(@food_list.collect{"food"}).to eq(["food","food","food","food","food"])
-    end
+end
+
+RSpec.describe List do
+  before :each do
+    @list = List.new(nil, nil)
+    @carne_de_vaca = Alimento.new("Carne de vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
+    @nuez = Alimento.new("Nuez", 20.0, 21.0, 54.0 ,0.3, 7.9)
+    @pollo = Alimento.new("Pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+    @huevos = Alimento.new("Huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
+    @cerveza = Alimento.new("Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+    @list.insert(@carne_de_vaca)
+    @list.insert(@nuez)
+    @list.insert(@pollo)
+  end
+  it "Método collect" do
+    expect(@list.collect{ "cat" }).to eq(["cat","cat","cat"])
   end
 end
 

@@ -2,6 +2,7 @@
 Node = Struct.new(:value, :prev, :next)     # Nodos que formarán parte de la lista
 
 class List
+  include Enumerable
   # Construye una lista con una cabeza y una cola
   def initialize (head, tail)
     @head_ = head
@@ -36,5 +37,14 @@ class List
   # Devuelve head
   def head
     @head_
+  end
+  
+  # Yield con cada elemento de la lista
+  def each
+    node = @head_
+    while node != nil do
+      yield node[:value]
+      node = node[:next]
+    end
   end
 end
