@@ -22,4 +22,14 @@ class Plato
     end 
     protein * (100.0 / @total_nutricional)
   end
+
+  def carbohidratos
+    food = @ingredientes.head
+    carbos = 0.0
+    while food != nil do
+      carbos += food[:value].carbohidratos * (food[:value].gramos / 1000.0)
+      food = food[:next]
+    end
+    carbos * (100.0 / @total_nutricional)
+  end
 end
