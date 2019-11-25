@@ -55,6 +55,9 @@ RSpec.describe List do
   it "Método max" do
     expect(@list.max).to eq(@carne_de_vaca)
   end
+  it "Método min" do
+    expect(@list.min).to eq(@pollo)
+  end
 end
 
 RSpec.describe Dieta do
