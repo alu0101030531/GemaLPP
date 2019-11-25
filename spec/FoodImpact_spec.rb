@@ -6,11 +6,11 @@ end
 
 RSpec.describe Alimento do
   before :each do
-    @Nuez = Alimento.new("Nuez", 20.0, 21.0, 54.0 ,0.3, 7.9)
-    @Pollo = Alimento.new("Pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
-    @Huevos = Alimento.new("Huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
-    @Cerveza = Alimento.new("Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
-    @carne_de_vaca = Alimento.new("Carne de Vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
+    @Nuez = Alimento.new(30, "Nuez", 20.0, 21.0, 54.0 ,0.3, 7.9)
+    @Pollo = Alimento.new(30, "Pollo", 20.6, 0.0, 5.6, 5.7, 7.1)
+    @Huevos = Alimento.new(30, "Huevos", 13.0, 1.1, 11.0, 4.2, 5.7)
+    @Cerveza = Alimento.new(30, "Cerveza", 0.5, 3.6, 0.0, 0.24, 0.22)
+    @carne_de_vaca = Alimento.new(30, "Carne de Vaca", 21.1, 0.0, 3.1, 50.0, 164.0)
   end
 
   it "Debe existir un nombre para el alimento" do
@@ -32,10 +32,10 @@ RSpec.describe Alimento do
     expect(@carne_de_vaca.terreno).to eq(164.0)
   end
   it "Debe existir un método con el alimento formateado" do
-    expect(@carne_de_vaca.to_s).to eq("Nombre: Carne de Vaca, Proteinas: 21.1, Carbohidratos: 0.0, Lípidos: 3.1, GEI: 50.0, Terreno: 164.0")
+    expect(@carne_de_vaca.to_s).to eq("Nombre: Carne de Vaca, Gramos: 30, Proteinas: 21.1, Carbohidratos: 0.0, Lípidos: 3.1, GEI: 50.0, Terreno: 164.0")
   end
   it "Debe calcular el valor energético del alimento" do
-    expect(@carne_de_vaca.valor_energetico).to be_within(0.01).of(112.3)
+    expect(@carne_de_vaca.valor_energetico).to be_within(0.01).of(3.369)
   end
   it "Debe calcular el impacto ambiental de un hombre" do
     expect(@Nuez.gei + @Pollo.gei + @Huevos.gei + @Cerveza.gei).to be_within(0.01).of(10.44)
