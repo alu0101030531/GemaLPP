@@ -55,5 +55,8 @@ RSpec.describe Alimento do
     it "operador ==" do
       expect(@carne_de_vaca == @carne_de_vaca).to eq(true)
     end
+    it "operador <=" do
+      expect(@Pollo <= @carne_de_vaca).to eq(true)
+    end
   end
 end
