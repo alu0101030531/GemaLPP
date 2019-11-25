@@ -23,5 +23,7 @@ RSpec.describe Regimen do
   it "Uso del terreno" do
     expect(@regimen.terreno).to be_within(0.01).of(1.074)
   end
-  it "Calcula la eficiencia
+  it "Calcula la eficiencia" do
+    expect(@regimen.eficiencia).to be_within(0.01).of(3)
+  end
 end
