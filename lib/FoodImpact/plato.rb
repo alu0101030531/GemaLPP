@@ -32,4 +32,14 @@ class Plato
     end
     carbos * (100.0 / @total_nutricional)
   end
+
+  def lipidos
+    food = @ingredientes.head
+    lipidos = 0.0
+    while food != nil do
+      lipidos += food[:value].lipidos * (food[:value].gramos / 1000.0)
+      food = food[:next]
+    end
+    lipidos * (100.0 / @total_nutricional)
+  end
 end
