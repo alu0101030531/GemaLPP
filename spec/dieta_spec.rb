@@ -18,6 +18,6 @@ RSpec.describe Regimen do
     @regimen = Regimen.new("Escaldon", @plato_list)
   end
   it "Emisiones de gases de la dieta" do
-    expect(@regimen.gei).to be_within(0.01).of(200)
+    expect(@regimen.gei).to be_within(0.01).of(8.4)
   end
 end
