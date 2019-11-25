@@ -18,9 +18,10 @@ RSpec.describe Regimen do
     @regimen = Regimen.new("Escaldon", @plato_list)
   end
   it "Emisiones de gases de la dieta" do
-    expect(@regimen.gei).to be_within(0.01).of(8.4)
+    expect(@regimen.gei).to be_within(0.01).of(0.915)
   end
   it "Uso del terreno" do
-    expect(@regimen.terreno).to be_within(0.01).of(20)
+    expect(@regimen.terreno).to be_within(0.01).of(1.074)
   end
+  it "Calcula la eficiencia
 end
