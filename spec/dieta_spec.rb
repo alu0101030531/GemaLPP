@@ -20,4 +20,7 @@ RSpec.describe Regimen do
   it "Emisiones de gases de la dieta" do
     expect(@regimen.gei).to be_within(0.01).of(8.4)
   end
+  it "Uso del terreno" do
+    expect(@regimen.terreno).to be_within(0.01).of(20)
+  end
 end
