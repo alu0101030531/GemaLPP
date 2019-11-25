@@ -32,6 +32,11 @@ RSpec.describe List do
   it "Debe devolver la cabeza" do
     @food_list.head
   end
+  context "Pruebas módulo enumerable" do
+    it "método collect" do
+      expect(@food_list.collect{"food"}).to eq(["food","food","food","food","food"])
+    end
+  end
 end
 
 RSpec.describe Dieta do
