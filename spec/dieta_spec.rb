@@ -24,6 +24,9 @@ RSpec.describe Regimen do
     expect(@regimen.terreno).to be_within(0.01).of(1.074)
   end
   it "Calcula la eficiencia" do
-    expect(@regimen.eficiencia).to be_within(0.01).of(3)
+    expect(@regimen.eficiencia).to be_within(0.01).of(37.22)
+  end
+  it "Debe ser una instancia de Regimen" do
+    expect(@regimen.instance_of? Regimen).to eq(true)
   end
 end

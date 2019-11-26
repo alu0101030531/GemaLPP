@@ -23,4 +23,8 @@ class Regimen < Plato
     terreno
   end
 
+  def eficiencia
+    kcalorias / (terreno + gei)
+  end
+
 end
