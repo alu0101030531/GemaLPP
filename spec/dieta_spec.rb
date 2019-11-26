@@ -170,6 +170,9 @@ RSpec.describe Regimen do
     cena2 = @vegetaliana.head[:next][:next]
     expect(cena[:value].eficiencia == cena2[:value].eficiencia).to eq(false)
   end
-    
+   
+  it "Collect " do
+    expect(@carne.collect {@desayuno_c}).to eq([@desayuno_c, @desayuno_c, @desayuno_c])
+  end
 end
 
