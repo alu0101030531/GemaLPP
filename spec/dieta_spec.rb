@@ -54,6 +54,7 @@ RSpec.describe Regimen do
     @salmon = Alimento.new(120, "Salmon", 19.9, 0.0, 13.6, 6.0, 3.7)
     @tofu = Alimento.new(70, "Tofu", 8.0, 1.9, 4.8, 2.0, 2.2)
     @lentejas = Alimento.new(140, "Lentejas", 23.5, 52.0, 1.4, 0.4, 3.4)
+    @leche = Alimento.new(500, "Leche", 10.0, 3, 7, 20, 5.7)
 
     # Dietas
     # Española
@@ -77,16 +78,16 @@ RSpec.describe Regimen do
 
     # Vasca
     @v_desayuno = List.new(nil, nil)
-    @v_desayuno.insert(@huevos)
-    @v_desayuno.insert(@salmon)
+    @v_desayuno.insert(@leche)
+    @v_desayuno.insert(@chocolate)
     @desayuno_v = Regimen.new("H y S", @v_desayuno)
     @v_almuerzo = List.new(nil, nil)
-    @v_almuerzo.insert(@carne_de_vaca)
-    @v_almuerzo.insert(@nuez)
+    @v_almuerzo.insert(@lentejas)
+    @v_almuerzo.insert(@camarones)
     @v_almuerzo.insert(@chocolate)
     @almuerzo_v = Regimen.new("Carne", @v_almuerzo)
     @v_cena = List.new(nil, nil)
-    @v_cena.insert(@lentejas)
+    @v_cena.insert(@carne_de_vaca)
     @v_cena.insert(@camarones)
     @cena_v = Regimen.new("Lentejas", @v_cena)
     @vasca = List.new(nil, nil)
@@ -97,16 +98,16 @@ RSpec.describe Regimen do
     #  Vegetariana
     @ve_desayuno = List.new(nil, nil)
     @ve_desayuno.insert(@huevos)
-    @ve_desayuno.insert(@salmon)
+    @ve_desayuno.insert(@leche)
     @desayuno_ve = Regimen.new("H y S", @ve_desayuno)
     @ve_almuerzo = List.new(nil, nil)
-    @ve_almuerzo.insert(@carne_de_vaca)
+    @ve_almuerzo.insert(@tofu)
     @ve_almuerzo.insert(@nuez)
     @ve_almuerzo.insert(@chocolate)
     @almuerzo_ve = Regimen.new("Carne", @ve_almuerzo)
     @ve_cena = List.new(nil, nil)
-    @ve_cena.insert(@lentejas)
-    @ve_cena.insert(@camarones)
+    @ve_cena.insert(@tofu)
+    @ve_cena.insert(@cerveza)
     @cena_ve = Regimen.new("Lentejas", @ve_cena) 
     @vege = List.new(nil, nil)
     @vege.insert(@desayuno_ve)
@@ -117,16 +118,16 @@ RSpec.describe Regimen do
     # Vegetaliana
     @g_desayuno = List.new(nil, nil)
     @g_desayuno.insert(@huevos)
-    @g_desayuno.insert(@salmon)
+    @g_desayuno.insert(@tofu)
     @desayuno_g = Regimen.new("H y S", @g_desayuno)
     @g_almuerzo = List.new(nil, nil)
-    @g_almuerzo.insert(@carne_de_vaca)
+    @g_almuerzo.insert(@leche)
     @g_almuerzo.insert(@nuez)
     @g_almuerzo.insert(@chocolate)
     @almuerzo_g = Regimen.new("Carne", @g_almuerzo)
     @g_cena = List.new(nil, nil)
     @g_cena.insert(@lentejas)
-    @g_cena.insert(@camarones)
+    @g_cena.insert(@nuez)
     @cena_g = Regimen.new("Lentejas", @g_cena) 
     @vegetaliana = List.new(nil, nil)
     @vegetaliana.insert(@desayuno_g)
@@ -140,11 +141,11 @@ RSpec.describe Regimen do
     @desayuno_c = Regimen.new("H y S", @c_desayuno)
     @c_almuerzo = List.new(nil, nil)
     @c_almuerzo.insert(@carne_de_vaca)
-    @c_almuerzo.insert(@nuez)
+    @c_almuerzo.insert(@camarones)
     @c_almuerzo.insert(@chocolate)
     @almuerzo_c = Regimen.new("Carne", @c_almuerzo)
     @c_cena = List.new(nil, nil)
-    @c_cena.insert(@lentejas)
+    @c_cena.insert(@carne_de_cordero)
     @c_cena.insert(@camarones)
       @cena_c = Regimen.new("Lentejas", @c_cena)
     @carne = List.new(nil, nil)
@@ -157,5 +158,12 @@ RSpec.describe Regimen do
     desayuno = almuerzo[:prev]
     expect(desayuno[:value].kcalorias < almuerzo[:value].kcalorias).to eq(false)
   end
+
+  it "Comparación > " do
+    almuerzo = @vasca.head[:next]
+    almuerzo2 = @vege.head[:next]
+    expect(almuerzo[:value].kcalorias > almuerzo2[:value].kcalorias).to eq(true)
+  end
+    
 end
 
