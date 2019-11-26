@@ -178,5 +178,8 @@ RSpec.describe Regimen do
   it "Select" do
     expect(@spanish.select{ |plato| plato.eficiencia == @cena_e.eficiencia}).to eq([@cena_e])
   end
+  it "Max" do
+    expect(@vege.max).to eq(@desayuno_ve)
+  end
 end
 
