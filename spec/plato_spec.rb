@@ -42,7 +42,9 @@ RSpec.describe Plato do
     expect(@plato.to_s).to eq("Escaldon: Lentejas, Tofu, Salmon")
   end
   it "Métodos de comparación" do
-    expect(@plato2 > @plato).to eq(true)
+    expect(@plato2 > @plato).to eq(false)
+    expect(@plato2 <= @plato).to eq(true)
+    expect(@plato2 == @plato).to eq(false)
   end
 
 end

@@ -1,5 +1,6 @@
 class Plato 
-  attr_reader :nombre
+  include Comparable
+  attr_reader :nombre, :total_nutricional
   def initialize(nombre,ingredientes)
     @nombre = nombre
     @ingredientes = ingredientes
@@ -52,6 +53,7 @@ class Plato
     end
     calorias
   end
+
   def to_s
     format = "#{nombre}: "
     food = @ingredientes.head
@@ -60,5 +62,9 @@ class Plato
       food = food[:next]
     end
     format += "#{@ingredientes.tail[:value].nombre}"
+  end
+
+  def <=>(other)
+    @total_nutricional <=> other.total_nutricional
   end
 end
