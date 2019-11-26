@@ -184,5 +184,8 @@ RSpec.describe Regimen do
   it "Min" do
     expect(@vege.min).to eq(@cena_ve)
   end
+  it "Sort" do
+    expect(@vege.sort).to eq([@cena_ve,@almuerzo_ve,@desayuno_ve])
+  end
 end
 
