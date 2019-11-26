@@ -29,4 +29,7 @@ RSpec.describe Regimen do
   it "Debe ser una instancia de Regimen" do
     expect(@regimen.instance_of? Regimen).to eq(true)
   end
+  it "Tipo del objeto" do
+    expect(@regimen.class).to eq(Regimen)
+  end
 end
