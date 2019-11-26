@@ -164,6 +164,12 @@ RSpec.describe Regimen do
     almuerzo2 = @vege.head[:next]
     expect(almuerzo[:value].kcalorias > almuerzo2[:value].kcalorias).to eq(true)
   end
+
+  it "Comparación == " do
+    cena = @carne.head[:next][:next]
+    cena2 = @vegetaliana.head[:next][:next]
+    expect(cena[:value].eficiencia == cena2[:value].eficiencia).to eq(false)
+  end
     
 end
 
