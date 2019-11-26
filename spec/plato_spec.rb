@@ -15,6 +15,11 @@ RSpec.describe Plato do
     @plato_list.insert(@lentejas)
     @plato_list.insert(@tofu)
     @plato_list.insert(@salmon)
+    @plato2_list = List.new(nil, nil)
+    @plato2_list.insert(@camarones)
+    @plato2_list.insert(@carne_de_cordero)
+    @plato2_list.insert(@carne_de_vaca)
+    @plato2 = Plato.new("Estofado", @plato2_list)
     @plato = Plato.new("Escaldon", @plato_list)
   end
 
@@ -36,4 +41,8 @@ RSpec.describe Plato do
   it "Plato formateado" do
     expect(@plato.to_s).to eq("Escaldon: Lentejas, Tofu, Salmon")
   end
+  it "Métodos de comparación" do
+    expect(@plato2 > @plato).to eq(true)
+  end
+
 end
