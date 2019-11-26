@@ -174,5 +174,9 @@ RSpec.describe Regimen do
   it "Collect " do
     expect(@carne.collect {@desayuno_c}).to eq([@desayuno_c, @desayuno_c, @desayuno_c])
   end
+
+  it "Select" do
+    expect(@spanish.select{ |plato| plato.eficiencia == @cena_e.eficiencia}).to eq([@cena_e])
+  end
 end
 
