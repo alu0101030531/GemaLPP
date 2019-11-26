@@ -35,4 +35,7 @@ RSpec.describe Regimen do
   it "is_a" do
     expect(@regimen.is_a? Regimen).to eq(true)
   end
+  it "is_a con la super" do
+    expect(@regimen.is_a? Plato).to eq(true)
+  end
 end
