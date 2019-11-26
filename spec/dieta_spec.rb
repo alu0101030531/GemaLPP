@@ -32,4 +32,7 @@ RSpec.describe Regimen do
   it "Tipo del objeto" do
     expect(@regimen.class).to eq(Regimen)
   end
+  it "is_a" do
+    expect(@regimen.is_a? Regimen).to eq(true)
+  end
 end
