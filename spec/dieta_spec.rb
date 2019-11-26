@@ -181,5 +181,8 @@ RSpec.describe Regimen do
   it "Max" do
     expect(@vege.max).to eq(@desayuno_ve)
   end
+  it "Min" do
+    expect(@vege.min).to eq(@cena_ve)
+  end
 end
 
