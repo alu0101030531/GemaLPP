@@ -1,0 +1,22 @@
+Mon, 16 Dec 2019 14:51:08 +0000
+./README.md	Thu, 14 Nov 2019 13:46:22 +0000
+./bin/setup	Thu, 14 Nov 2019 13:46:22 +0000
+./bin/console	Thu, 14 Nov 2019 13:46:22 +0000
+./Guardfile	Thu, 21 Nov 2019 11:41:41 +0000
+./LICENSE.txt	Thu, 14 Nov 2019 13:46:22 +0000
+./spec/spec_helper.rb	Thu, 14 Nov 2019 13:46:22 +0000
+./spec/plato_spec.rb	Thu, 28 Nov 2019 13:39:00 +0000
+./spec/functional_spec.rb	Sat, 07 Dec 2019 22:05:17 +0000
+./spec/FoodImpact_spec.rb	Mon, 25 Nov 2019 22:15:36 +0000
+./spec/dieta_spec.rb	Sat, 07 Dec 2019 21:33:08 +0000
+./spec/list_spec.rb	Mon, 25 Nov 2019 22:15:36 +0000
+./Rakefile	Thu, 14 Nov 2019 13:46:22 +0000
+./Gemfile	Thu, 14 Nov 2019 13:46:22 +0000
+./lib/FoodImpact.rb	Thu, 28 Nov 2019 13:39:00 +0000
+./lib/FoodImpact/plato.rb	Mon, 16 Dec 2019 14:51:05 +0000
+./lib/FoodImpact/regimen.rb	Mon, 16 Dec 2019 14:48:47 +0000
+./lib/FoodImpact/version.rb	Thu, 14 Nov 2019 13:46:22 +0000
+./lib/FoodImpact/dieta.rb	Mon, 16 Dec 2019 14:40:09 +0000
+./lib/FoodImpact/alimento.rb	Mon, 16 Dec 2019 14:40:42 +0000
+./lib/FoodImpact/list.rb	Mon, 16 Dec 2019 14:43:14 +0000
+./Gemfile.lock	Mon, 16 Dec 2019 14:22:37 +0000

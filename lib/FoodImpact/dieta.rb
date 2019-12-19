@@ -1,7 +1,16 @@
+# *Autor*:: Christian Jesús Pérez
+# *Email*:: alu0101030531@ull.edu.es
+
+#=  Representa un conjunto de alimentos
+#=== Modo de uso
+# carne = Alimento.new(100,2,3,4,6,5)
+# lista = List.new
+# list.insert carne
+# Dieta.new(lista)
 class Dieta
-  def initialize(list) 
+  def initialize(list)
     @list_ = List.new(nil,nil)
-    @list_ = list 
+    @list_ = list
   end
 
   # Obtiene la emisión de gases de la dieta en un día

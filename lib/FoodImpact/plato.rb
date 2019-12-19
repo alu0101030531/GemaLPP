@@ -1,6 +1,19 @@
-class Plato 
+# *Autor*:: Christian Jesús Pérez
+# *Email*:: alu0101030531@ull.edu.es
+
+#= Representa un plato (conjunto de alimentos)
+#=== Modo de uso
+# carne = Alimento.new(1,2,3,4,5,6)
+# papas = Alimento.new(6,5,4,3,2,1)
+# lista = List.new
+# lista.insert(carne)
+# lista.insert(papas)
+# Plato.new("carne con papas", lista)
+class Plato
   include Comparable
   attr_reader :nombre, :total_nutricional
+
+  # Construye un objeto Plato
   def initialize(nombre,ingredientes)
     @nombre = nombre
     @ingredientes = ingredientes
@@ -14,16 +27,18 @@ class Plato
     end
   end
 
+  # Devuelve las proteinas del plato
   def proteinas
     food = @ingredientes.head
     protein = 0.0
     while food != nil do
       protein += food[:value].proteinas * (food[:value].gramos / 1000.0)
       food = food[:next]
-    end 
+    end
     protein * (100.0 / @total_nutricional)
   end
 
+  # Develve los carbohidratos del plato
   def carbohidratos
     food = @ingredientes.head
     carbos = 0.0
@@ -34,6 +49,7 @@ class Plato
     carbos * (100.0 / @total_nutricional)
   end
 
+  # Devuelve los lipidos del plato
   def lipidos
     food = @ingredientes.head
     lipidos = 0.0
@@ -44,6 +60,7 @@ class Plato
     lipidos * (100.0 / @total_nutricional)
   end
 
+  # Devuelve las kilocalorías del plato
   def kcalorias
     food = @ingredientes.head
     calorias = 0.0
@@ -54,6 +71,7 @@ class Plato
     calorias
   end
 
+  # Devuelve el plato formateado
   def to_s
     format = "#{nombre}: "
     food = @ingredientes.head
@@ -64,6 +82,7 @@ class Plato
     format += "#{@ingredientes.tail[:value].nombre}"
   end
 
+  # Permite comparar platos por su valor nutricional
   def <=>(other)
     @total_nutricional <=> other.total_nutricional
   end
