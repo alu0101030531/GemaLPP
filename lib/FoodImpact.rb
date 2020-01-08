@@ -4,6 +4,7 @@ require "FoodImpact/list"
 require "FoodImpact/dieta"
 require "FoodImpact/plato"
 require "FoodImpact/regimen"
+require "FoodImpact/menu"
 
 module FoodImpact
   class Error < StandardError; end

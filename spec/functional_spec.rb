@@ -1,4 +1,4 @@
-RSpec.describe "menús" do
+RSpec.describe Plato do
   before :each do
 
     # Alimentos
