@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/alu0101030531/GemaLPP/badge.svg?branch=master)](https://coveralls.io/github/alu0101030531/GemaLPP?branch=master)
 # FoodImpact
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/FoodImpact`. To experiment with that code, run `bin/console` for an interactive prompt.
