@@ -69,6 +69,6 @@ RSpec.describe MenuDSL do
   end
 
   it "Crea un menu" do
-    expect(@menu.to_s).to eq("")
+    expect(@menu.to_s).to eq("Hamburguesa especial de la casa, carne de vaca 100 20.0 21.0 54.0 0.3 7.9, huevo 20 5.0 2.0 9.0 0.1 8.0,  4.25, papas pequeñas, papas pequeñas 100 20.0 21.0 54.0 0.3 7.9,  1.75, Refresco, Refresco 100 20.0 21.0 54.0 0.3 7.9,  1.5, ")
   end
 end
