@@ -1,6 +1,6 @@
 require "bundler/setup"
 require "FoodImpact"
-require ’coveralls’
+require "coveralls"
 Coveralls.wear!
 
 RSpec.configure do |config|
